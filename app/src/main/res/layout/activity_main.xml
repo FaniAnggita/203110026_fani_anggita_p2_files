@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    tools:ignore="HardcodedText">
+
+    <EditText
+        android:id="@+id/editTextFolderName"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/folder_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextFileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/file_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFolderName" />
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="3dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/content"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFileName" />
+
+<!---->
+    <Button
+        android:id="@+id/buttonWriteFile"
+        style="?android:attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/teal_200"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/write_file"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonReadFile"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReadFile"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReadFile"
+        style="?android:attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/yellow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/read_file"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDeleteFile"
+        app:layout_constraintStart_toEndOf="@+id/buttonWriteFile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContent" />
+
+    <Button
+        android:id="@+id/buttonDeleteFile"
+        style="?android:attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/red"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/delete_file"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonReadFile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonReadFile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

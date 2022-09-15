@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Tambah Catatan</string>
+    <string name="folder_name">Nama Folder</string>
+    <string name="file_name">Nama File</string>
+    <string name="content">Konten</string>
+    <string name="write_file">Simpan</string>
+    <string name="read_file">Baca</string>
+    <string name="delete_file">Hapus</string>
+    <string name="done">Selesai</string>
+</resources>
